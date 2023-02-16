@@ -1,0 +1,41 @@
+.login {
+  @apply h-[100vh];
+  
+  .row {
+    @apply h-full;
+  }
+
+  &__left {
+    @apply hidden;
+    @apply lg:flex;
+    @apply p-16;
+
+    .left-img {
+      @apply w-[75%];
+      @apply mx-auto;
+    }
+  }
+
+  &__right {
+    @apply bg-white;
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+    @apply p-16;
+
+    .right-form {
+      @apply w-full;
+
+      &__password {
+        a {
+          @apply block;
+          @apply text-right;
+        }
+      }
+    }
+
+    .right-signup {
+      @apply mt-8;
+    }
+  }
+}

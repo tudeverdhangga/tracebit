@@ -1,11 +1,11 @@
 <template>
-  <v-app>
-    <router-view />
-  </v-app>
+  <div>
+    dashboard
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'DashboardPage'
 }
 </script>
