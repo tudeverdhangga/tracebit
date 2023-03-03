@@ -1,0 +1,11 @@
+.dashboard {
+  @apply p-16;
+
+  &-header {
+    @apply text-2xl;
+    @apply font-semibold;
+    @apply mb-4;
+    @apply absolute;
+    @apply w-[70%];
+  }
+}

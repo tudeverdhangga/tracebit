@@ -12,7 +12,6 @@ const requiresAuth = (to, from, next) => {
     return next('/login')
   }
 
-  console.log(isAuthenticated)
   if (!isAuthenticated) {
     return logout()
   }

@@ -1,0 +1,33 @@
+.the-navbar {
+  .v-toolbar {
+    @apply shadow-none;
+    @apply border-x-0;
+  }
+  .v-toolbar__content {
+    @apply py-0;
+  }
+  .v-btn--active::before {
+    @apply opacity-0;
+  }
+  .v-btn--active {
+    @apply border-b-2;
+    @apply border-primary;
+    @apply text-primary;
+  }
+
+  &__profile {
+    @apply flex;
+    @apply items-center;
+
+    .profile-username {
+      @apply font-semibold;
+      @apply mb-0;
+      @apply mr-3;
+    }
+  }
+  &__breadcrumbs {
+    .v-breadcrumbs {
+      @apply py-[10px];
+    }
+  }
+}

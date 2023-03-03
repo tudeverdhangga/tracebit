@@ -1,0 +1,23 @@
+.dashboard-widget {
+  @apply mb-10;
+
+  &__filter {
+    @apply flex;
+    @apply justify-end;
+    @apply w-full;
+    
+    .filter-month {
+      @apply w-[150px];
+    }
+  }
+}
+
+.v-menu__content {
+  .v-picker {
+    .v-date-picker-table.v-date-picker-table--month {
+      .v-btn.v-btn--active {
+        @apply text-primary;
+      }
+    }
+  }
+}

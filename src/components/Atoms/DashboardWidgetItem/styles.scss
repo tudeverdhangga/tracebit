@@ -1,0 +1,40 @@
+.item-card {
+  @apply relative;
+  @apply p-[32px];
+
+  &__heading {
+    @apply mb-6;
+    
+    .heading-title {
+      @apply text-lg;
+      @apply font-medium;
+      @apply mb-0;
+    }
+    .heading-landing-page {
+      @apply pt-0;
+    }
+  }
+
+  &__amount {
+    .amount-total {
+      @apply text-4xl;
+
+      &__rate-code {
+        @apply text-sm;
+        @apply font-normal;
+      }
+    }
+    .amount-increase {
+      @apply text-sm;
+      @apply mb-0;
+    }
+  }
+
+  &__checkbox {
+    @apply absolute;
+    @apply top-0;
+    @apply right-0;
+    @apply mr-[16px];
+    @apply mt-[28px];
+  }
+}

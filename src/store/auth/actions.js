@@ -5,7 +5,6 @@ import API_URL from '@/services'
 import cookieServices from '@/utils/cookieServices'
 
 export default function useActions({ state }) {
-
   const login = async ({
     data,
     preload = () => null

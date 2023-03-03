@@ -1,0 +1,20 @@
+.form {
+  @apply p-6;
+
+  &__table {
+    @apply p-[32px];
+    @apply mt-6;
+  }
+}
+
+.v-menu__content {
+  .v-list.action-table {
+    .v-list-item {
+      @apply text-sm;
+      
+      .v-icon {
+        @apply text-sm;
+      }
+    }
+  }
+}

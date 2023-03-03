@@ -6,6 +6,8 @@ import cookieServices from '@/utils/cookieServices'
 
 const Login = () => import('@/views/Login/index.vue')
 const Dashboard = () => import('@/views/Dashboard/index.vue')
+const Form = () => import('@/views/Form/index.vue')
+const EmptyRouterView = () => import('@/views/EmptyRouterView/index.vue')
 
 Vue.use(VueRouter)
 
@@ -15,24 +17,40 @@ const isAuthenticated = isLoggedIn && isSession
 
 const routes = [
   {
-    path: '/login',
-    name: 'Login',
-    component: Login,
-    beforeEnter(to, from, next) {
-      if (isAuthenticated) {
-        next('/dashboard')
-      } else {
-        next()
+    path: '/',
+    name: 'root',
+    component: EmptyRouterView,
+    redirect: { path: 'dashboard' },
+    children: [
+      {
+        path: '/login',
+        name: 'Login',
+        component: Login,
+        beforeEnter(to, from, next) {
+          if (isAuthenticated) {
+            next('/dashboard')
+          } else {
+            next()
+          }
+        }
+      },
+      {
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: Dashboard,
+        meta: {
+          requiresAuth: true
+        }
+      },
+      {
+        path: '/form',
+        name: 'Form',
+        component: Form,
+        meta: {
+          requiresAuth: true
+        }
       }
-    }
-  },
-  {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: Dashboard,
-    meta: {
-      requiresAuth: true
-    }
+    ]
   }
 ]
 

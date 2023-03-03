@@ -69,7 +69,7 @@ const HTTP = {
     // Intercept the request to make sure the token is injected into the header.
     axios.interceptors.request.use((config) => {
       const token = cookieServices.getAccessToken()
-      if (!token.isEmpty()) {
+      if (token) {
         config.headers.Authorization = `Bearer ${token}`
       }
 

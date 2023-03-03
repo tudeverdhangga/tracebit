@@ -3,13 +3,16 @@ import { createPinia, PiniaVuePlugin } from 'pinia'
 import axios from 'axios'
 import Toast from 'vue-toastification'
 import store from 'store'
+import VueApexCharts from 'vue-apexcharts'
 
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from './router'
 import validation from './plugins/validation'
+import Http from '@/services/http'
 
 import 'vue-toastification/dist/index.css'
+
 
 Vue.config.productionTip = false
 
@@ -27,6 +30,7 @@ const toastOptions = {
 
 Vue.use(PiniaVuePlugin)
 Vue.use(Toast, toastOptions)
+Vue.use(VueApexCharts)
 
 const pinia = createPinia()
 
@@ -37,5 +41,6 @@ new Vue({
   router,
   store,
   pinia,
+  created: () => Http.init(),
   render: h => h(App)
 }).$mount('#app')

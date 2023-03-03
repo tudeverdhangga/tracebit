@@ -1,0 +1,18 @@
+.dashboard-chart {
+  @apply mb-10;
+
+  &__card {
+    @apply p-[32px];
+  
+    .card-filter {
+      @apply w-full;
+      @apply flex;
+      @apply justify-end;
+  
+      &__year {
+        @apply w-[150px];
+        @apply max-w-[150px];
+      }
+    }
+  }
+}

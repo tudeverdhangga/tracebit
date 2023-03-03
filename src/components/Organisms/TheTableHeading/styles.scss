@@ -1,0 +1,28 @@
+.table-heading {
+  @apply flex;
+  @apply items-end;
+
+  &__description {
+    @apply max-w-[50%];
+
+    .description-title {
+      @apply text-lg;
+      @apply font-semibold;
+      @apply pb-4;
+    }
+    .description-page {
+      @apply text-sm;
+      @apply text-gray-600;
+    }
+  }
+  &__action {
+    @apply flex;
+
+    .action-search {
+      @apply pr-3;
+    }
+    .action-create.v-btn {
+      @apply h-[40px];
+    }
+  }
+}

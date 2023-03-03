@@ -1,5 +1,11 @@
-// .tracebit {
-//   .v-btn {
+.tracebit {
+  .theme--light.v-btn {
+    @apply normal-case;
+    @apply tracking-normal;
+    @apply text-[15px];
 
-//   }
-// }
+    &:not(.v-btn--active) {
+      // @apply text-[#505050]
+    }
+  }
+}
